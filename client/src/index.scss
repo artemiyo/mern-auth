@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto";
+}
+
+a {
+    color: #2199df;
+    text-decoration: unset;
+}
+
+ul {
+    margin-left: 1.5rem;
+    list-style: none;
+}
+
+button,
+input[type="submit"] {
+    border: none;
+    background: none;
+    color: unset;
+    cursor: pointer;
+    outline: none;
+}
+
+@each $number in 1, 2, 3, 4, 5, 6 {
+    h#{$number} {
+        margin: 1em 0;
+    }
+}
+
+// Header styling
+
+#header {
+    background-color: #2199df;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 0px 0 20px;
+
+    .title {
+        margin: 0;
+        color: white;
+    }
+
+    .auth-options {
+        height: 100%;
+        display: flex;
+        button {
+            padding: 0 1rem;
+            color: white;
+            font-size: 1.1rem;
+
+            &:hover {
+                background-color: darken($color: #2199df, $amount: 7);
+            }
+        }
+    }
+}
+
+.page {
+    padding: 1rem;
+}
+
+.form {
+    label,
+    input {
+        display: block;
+    }
+
+    input {
+        width: 30%;
+        font-size: 1.1rem;
+        border: 1px solid #cacaca;
+        border-radius: 4px;
+        background-color: #eeeded;
+        padding: 7px 5px;
+        margin-bottom: 1rem;
+    }
+
+    label {
+        margin-bottom: 0.5rem;
+    }
+
+    button[type="submit"] {
+        border: 1px solid #2199df;
+        color: #2199df;
+        font-size: 1.1rem;
+        border-radius: 4px;
+        width: 200px;
+        height: 40px;
+
+        &:hover {
+            color: #fff;
+            background-color: #2199df;
+        }
+    }
+}
+
+.error-notice {
+    border: 1px solid rgb(208, 46, 46);
+    background-color: rgb(243, 181, 181);
+    border-radius: 4px;
+    padding: 10px;
+    width: 30%;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+        font-size: 1.5rem;
+    }
+}
